@@ -21,8 +21,8 @@ const Navbar = () => {
                                 tabIndex="-1"
                                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                                 <div className="flex flex-col items-center justify-center gap-2">
-                                    <Link href={"/home"}>
-                                        <button className={`${path == "/home" ? " bg-[#244D3F] text-white border-none" : ""} btn btn-outline w-30`}><IoHome /> Home</button>
+                                    <Link href={"/"}>
+                                        <button className={`${path == "/" ? " bg-[#244D3F] text-white border-none" : ""} btn btn-outline w-30`}><IoHome /> Home</button>
                                     </Link>
                                     <Link href={"/timeline "}>
                                         <button className={`${path == "/timeline" ? " bg-[#244D3F] text-white border-none" : ""} btn btn-outline  w-30`}><IoTimeOutline /> Timeline</button>
