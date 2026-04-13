@@ -36,8 +36,8 @@ const Navbar = () => {
                         <Link href={"/"} className="text-black font-black text-2xl">Keen<span className="text-[#244D3F] font-semibold">Keeper</span></Link>
                     </div>
                     <div className="navbar-end hidden lg:flex gap-2 text-gray-600">
-                        <Link href={"/home"}>
-                            <button className={`${path == "/home" ? " bg-[#244D3F] text-white border-none" : ""} btn btn-outline`}><IoHome /> Home</button>
+                        <Link href={"/"}>
+                            <button className={`${path == "/" ? " bg-[#244D3F] text-white border-none" : ""} btn btn-outline`}><IoHome /> Home</button>
                         </Link>
                         <Link href={"/timeline "}>
                             <button className={`${path == "/timeline" ? " bg-[#244D3F] text-white border-none" : ""} btn btn-outline`}><IoTimeOutline /> Timeline</button>
