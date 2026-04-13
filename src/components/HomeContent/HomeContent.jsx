@@ -1,14 +1,15 @@
+import ProfileCard from "../shared/ui/ProfileCard/ProfileCard";
 
 const HomeContent = async () => {
     const dataPromise = await fetch("http://localhost:3000/apidata.json")
     const data = await dataPromise.json()
     console.log(data)
-const stats = [
-    { value: '10', label: 'Total Friends' },
-    { value: '3', label: 'On Track' },
-    { value: '6', label: 'Need Attention' },
-    { value: '12', label: 'Interactions This Month' },
-  ];
+    const stats = [
+        { value: '10', label: 'Total Friends' },
+        { value: '3', label: 'On Track' },
+        { value: '6', label: 'Need Attention' },
+        { value: '12', label: 'Interactions This Month' },
+    ];
     return (
         <>
             <header className="flex flex-col items-center justify-center py-20 px-6">
@@ -43,6 +44,12 @@ const stats = [
                 </div>
 
                 <div className="w-full h-px bg-gray-200 mt-12 mb-4"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pb-10">
+                {
+                    data.map(item => <ProfileCard key={item.id} item={item} />)
+                }
             </div>
         </>
     )
