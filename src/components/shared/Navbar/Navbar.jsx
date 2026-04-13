@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className=" bg-white  shadow-sm border-b-2 sticky top-0 z-10">
+            <div className=" bg-white  shadow-sm border-b border-gray-500/55 sticky top-0 z-10">
                 <div className="navbar container mx-auto">
                     <div className="navbar-start">
                         <div className="dropdown">
@@ -44,6 +44,9 @@ const Navbar = () => {
                         </Link>
                         <Link href={"/stats"}>
                             <button className={`${path == "/stats" ? " bg-[#244D3F] text-white border-none" : ""} btn btn-outline`}><MdOutlineQueryStats />Stats</button>
+                        </Link>
+                        <Link href={"/error"}>
+                            <button className={`${path == "/stats" ? " bg-[#244D3F] text-white border-none" : ""} btn btn-outline`}><MdOutlineQueryStats />Error page chack</button>
                         </Link>
                     </div>
                 </div>
