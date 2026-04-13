@@ -2,7 +2,6 @@ import Image from "next/image";
 
 export default function ProfileCard({ item }) {
     const { picture, name, days_since_contact, status, tags } = item;
-    console.log(status)
     const validation = status == "almost due" ? "bg-[#eeb14e]" : status == "overdue" ? "bg-red-500" : "bg-[#2c784c]"
     return (
         <div className=" bg-white rounded-[20px] shadow-[0_4px_12px_rgba(0,0,0,0.04)] border border-gray-50 p-6 flex flex-col items-center">

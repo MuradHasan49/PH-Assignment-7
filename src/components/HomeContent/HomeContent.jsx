@@ -3,10 +3,11 @@ import ProfileCard from "../shared/ui/ProfileCard/ProfileCard";
 const HomeContent = async () => {
     const dataPromise = await fetch("http://localhost:3000/apidata.json")
     const data = await dataPromise.json()
-    console.log(data)
+    const allOnTrack = data.filter(item => item.status === "on-track");
+
     const stats = [
-        { value: '10', label: 'Total Friends' },
-        { value: '3', label: 'On Track' },
+        { value: data.length, label: 'Total Friends' },
+        { value: allOnTrack.length , label: 'On Track' },
         { value: '6', label: 'Need Attention' },
         { value: '12', label: 'Interactions This Month' },
     ];
