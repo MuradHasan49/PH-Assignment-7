@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Tanvir Ahmed",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "tanvir.ahmed@devmail.com.bd",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["university", "developer"],
+    "bio": "CSE batchmate from Dhaka. Working on a fintech startup together.",
+    "goal": 7,
+    "next_due_date": "2026-04-18"
+  },
+  {
+    "id": 2,
+    "name": "Sabina Yasmin",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "sabina.yasmin.ui@outlook.com",
+    "days_since_contact": 15,
+    "status": "overdue",
+    "tags": ["colleague", "designer"],
+    "bio": "UI/UX designer based in Banani. We need to discuss the new landing page.",
+    "goal": 10,
+    "next_due_date": "2026-04-08"
+  },
+  {
+    "id": 3,
+    "name": "Faisal Karim",
+    "picture": "https://randomuser.me/api/portraits/men/46.jpg",
+    "email": "faisal.karim@chittagong.net",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["childhood friend", "cricket"],
+    "bio": "Lives in Chittagong. Always up for a weekend cricket match.",
+    "goal": 14,
+    "next_due_date": "2026-04-24"
+  },
+  {
+    "id": 4,
+    "name": "Ishrat Jahan",
+    "picture": "https://randomuser.me/api/portraits/women/65.jpg",
+    "email": "ishrat.jahan@techhub.com.bd",
+    "days_since_contact": 8,
+    "status": "almost due",
+    "tags": ["mentor", "programming"],
+    "bio": "Expert in React and Next.js. Provides great career guidance.",
+    "goal": 10,
+    "next_due_date": "2026-04-15"
+  },
+  {
+    "id": 5,
+    "name": "Minhazul Abedin",
+    "picture": "https://randomuser.me/api/portraits/men/22.jpg",
+    "email": "minhaz.abedin.cse@gmail.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": ["freelance", "client"],
+    "bio": "Managing an e-commerce project. Needs an update on the dashboard.",
+    "goal": 7,
+    "next_due_date": "2026-03-30"
+  },
+  {
+    "id": 6,
+    "name": "Farzana Akter",
+    "picture": "https://randomuser.me/api/portraits/women/17.jpg",
+    "email": "farzana.akter@university.edu.bd",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["study group", "exam"],
+    "bio": "Study partner for the upcoming recruitment exams. Very organized.",
+    "goal": 3,
+    "next_due_date": "2026-04-14"
+  },
+  {
+    "id": 7,
+    "name": "Rakibul Islam",
+    "picture": "https://randomuser.me/api/portraits/men/62.jpg",
+    "email": "rakib.islam.bd@gmail.com",
+    "days_since_contact": 6,
+    "status": "almost due",
+    "tags": ["neighbor", "dhanmondi"],
+    "bio": "Family friend living in Dhanmondi. Great resource for local networking.",
+    "goal": 7,
+    "next_due_date": "2026-04-14"
+  },
+  {
+    "id": 8,
+    "name": "Nusrat Sharmin",
+    "picture": "https://randomuser.me/api/portraits/women/26.jpg",
+    "email": "n.sharmin@freelance.com",
+    "days_since_contact": 12,
+    "status": "overdue",
+    "tags": ["writer", "content"],
+    "bio": "Professional content writer for tech blogs. Based in Sylhet.",
+    "goal": 10,
+    "next_due_date": "2026-04-11"
+  },
+  {
+    "id": 9,
+    "name": "Arifur Rahman",
+    "picture": "https://randomuser.me/api/portraits/men/86.jpg",
+    "email": "arifur.rahman.dev@gmail.com",
+    "days_since_contact": 4,
+    "status": "on-track",
+    "tags": ["hardware", "engineer"],
+    "bio": "Specialist in computer hardware and networking. Helps with server setups.",
+    "goal": 30,
+    "next_due_date": "2026-05-09"
+  },
+  {
+    "id": 10,
+    "name": "Sumaiya Tasnim",
+    "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+    "email": "sumaiya.tasnim@corp.com.bd",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": ["hr", "networking"],
+    "bio": "HR Manager at a leading IT firm in Mohakhali. Good for job leads.",
+    "goal": 12,
+    "next_due_date": "2026-04-16"
+  }
+]
