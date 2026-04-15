@@ -28,9 +28,9 @@ const ProfileDetails = ({ specificUser }) => {
         };
 
         setInteractionsData([newEntry, ...interactionsData]);
-        toast.success(type == "call" ? `Call with ${specificUser.name}` : type == "text" ? `Text with ${specificUser.name}` : `Video with ${specificUser.name}`, {
-            theme: "colored",
-        });
+        // toast.success(type == "call" ? `Call with ${specificUser.name}` : type == "text" ? `Text with ${specificUser.name}` : `Video with ${specificUser.name}`, {
+        //     theme: "colored",
+        // });
 
     };
     return (
