@@ -1,10 +1,33 @@
+"use client"
 import Image from "next/image";
 import { FaPhoneAlt } from "react-icons/fa"
 import { FaInbox, FaPencil, FaRegBell, FaRegCommentDots, FaRegFileVideo, FaRegTrashCan } from "react-icons/fa6"
 import RecentInteractions from "../RecentInteractions/RecentInteractions";
+import { useContext, useState } from "react";
+import { InteractionsDataCotext } from "@/components/ContextApi/GlobalsContext";
 
 const ProfileDetails = ({ specificUser }) => {
     const { picture, name, days_since_contact, status, tags, email, bio, next_due_date, goal } = specificUser;
+    const { interactionsData, setInteractionsData } = useContext(InteractionsDataCotext)
+
+    const handleInput = (type) => {
+        const readableTimestamp = new Date().toLocaleString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric',
+            hour: 'numeric',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: true
+        }).replace(',', ' -');
+        const newEntry = {
+            user: specificUser,
+            action: type,
+            timestamp: readableTimestamp
+        };
+
+        setInteractionsData([...interactionsData, newEntry]);
+    };
     return (
         <>
             <div className="min-h-screen  p-10 font-sans text-gray-900">
@@ -93,22 +116,22 @@ const ProfileDetails = ({ specificUser }) => {
 
                         <div className="bg-white rounded-2xl shadow-sm p-10 border border-gray-100">
                             <h3 className="text-[#0D382B] text-2xl font-bold mb-8">Quick Check-In</h3>
-                            <div className="grid grid-cols-3 gap-5">
-                                <button className="flex flex-col items-center justify-center gap-5 bg-[#F9FAFB] border border-gray-100 rounded-xl p-8 text-xl font-semibold text-gray-900 hover:bg-gray-100 transition-colors">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                                <button onClick={() => handleInput("call")} className="flex flex-col items-center justify-center gap-5 bg-[#F9FAFB] border border-gray-100 rounded-xl p-8 text-xl font-semibold text-gray-900 hover:bg-gray-100 transition-colors">
                                     <FaPhoneAlt className="text-4xl text-gray-800" />
                                     Call
                                 </button>
-                                <button className="flex flex-col items-center justify-center gap-5 bg-[#F9FAFB] border border-gray-100 rounded-xl p-8 text-xl font-semibold text-gray-900 hover:bg-gray-100 transition-colors">
+                                <button onClick={() => handleInput("text")} className="flex flex-col items-center justify-center gap-5 bg-[#F9FAFB] border border-gray-100 rounded-xl p-8 text-xl font-semibold text-gray-900 hover:bg-gray-100 transition-colors">
                                     <FaRegCommentDots className="text-4xl text-gray-800" />
                                     Text
                                 </button>
-                                <button className="flex flex-col items-center justify-center gap-5 bg-[#F9FAFB] border border-gray-100 rounded-xl p-8 text-xl font-semibold text-gray-900 hover:bg-gray-100 transition-colors">
+                                <button onClick={() => handleInput("video")} className="flex flex-col items-center justify-center gap-5 bg-[#F9FAFB] border border-gray-100 rounded-xl p-8 text-xl font-semibold text-gray-900 hover:bg-gray-100 transition-colors">
                                     <FaRegFileVideo className="text-4xl text-gray-800" />
                                     Video
                                 </button>
                             </div>
                         </div>
-                        <RecentInteractions specificUser={specificUser} />
+                        <RecentInteractions interactionsData={interactionsData} />
                     </div>
                 </div>
             </div>
