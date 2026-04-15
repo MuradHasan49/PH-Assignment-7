@@ -28,16 +28,17 @@ const ProfileDetails = ({ specificUser }) => {
         };
 
         setInteractionsData([newEntry, ...interactionsData]);
-        // toast.success(type == "call" ? `Call with ${specificUser.name}` : type == "text" ? `Text with ${specificUser.name}` : `Video with ${specificUser.name}`, {
-        //     theme: "colored",
-        // });
+        toast.success(type == "call" ? `Call with ${specificUser.name}` : type == "text" ? `Text with ${specificUser.name}` : `Video with ${specificUser.name}`, {
+            theme: "colored",
+            position: "bottom-right",
+        });
 
     };
     return (
         <>
             <div className="min-h-screen  p-10 font-sans text-gray-900">
                 <div className="container mx-auto flex flex-col md:flex-row gap-8">
-                    <div className="w-full md:w-1/3 flex flex-col gap-6">
+                    <div className=" flex flex-col gap-6">
                         <div className="bg-white rounded-2xl shadow-sm p-10 flex flex-col items-center text-center border border-gray-100">
                             <Image
                                 width={112}
@@ -91,7 +92,7 @@ const ProfileDetails = ({ specificUser }) => {
                     </div>
 
                     <div className="w-full md:w-2/3 flex flex-col gap-8">
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                             <div className="bg-white rounded-2xl shadow-sm p-10 flex flex-col items-center justify-center text-center border border-gray-100">
                                 <span className="text-[#0D382B] text-5xl font-extrabold mb-3">{days_since_contact}</span>
                                 <span className="text-gray-600 text-base">Days Since Contact</span>
@@ -121,7 +122,7 @@ const ProfileDetails = ({ specificUser }) => {
 
                         <div className="bg-white rounded-2xl shadow-sm p-10 border border-gray-100">
                             <h3 className="text-[#0D382B] text-2xl font-bold mb-8">Quick Check-In</h3>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                            <div className="grid grid-cols-1  lg:grid-cols-3 gap-5">
                                 <button onClick={() => handleInput("call")} className="flex flex-col items-center justify-center gap-5 bg-[#F9FAFB] border border-gray-100 rounded-xl p-8 text-xl font-semibold text-gray-900 hover:bg-gray-100 transition-colors">
                                     <FaPhoneAlt className="text-4xl text-gray-800" />
                                     Call

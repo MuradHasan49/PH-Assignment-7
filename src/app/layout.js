@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/shared/Navbar/Navbar";
 import Footer from "@/components/shared/Footer/Footer";
 import GlobalsContext from "@/components/ContextApi/GlobalsContext";
+import { ToastContainer } from "react-toastify";
 // import { useState } from "react";
 
 const geistSans = Geist({
@@ -30,9 +31,9 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full ">
         <GlobalsContext>
-          
           <Navbar />
           {children}
+          <ToastContainer />
           <Footer />
         </GlobalsContext>
       </body>

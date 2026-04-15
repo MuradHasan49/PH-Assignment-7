@@ -1,6 +1,5 @@
 "use client"
 import { createContext, useState } from "react";
-import { ToastContainer } from "react-toastify";
 
 export const myContext = createContext()
 export const InteractionsDataCotext = createContext([])
@@ -12,7 +11,6 @@ const GlobalsContext = ({ children }) => {
         <>
             <myContext.Provider value={{ data, setData }}>
                 <InteractionsDataCotext.Provider value={{ interactionsData, setInteractionsData }}>
-                    <ToastContainer/>
                     {children}
                 </InteractionsDataCotext.Provider>
             </myContext.Provider>

@@ -33,17 +33,17 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </div>
-                        <Link href={"/"} className="text-black font-black text-2xl">Keen<span className="text-[#244D3F] font-semibold">Keeper</span></Link>
+                        <Link href={"/"} className="text-black font-black text-xl lg:text-3xl">Keen<span className="text-[#244D3F] text-xl lg:text-3xl font-semibold">Keeper</span></Link>
                     </div>
                     <div className="navbar-end hidden lg:flex gap-2 text-gray-600">
                         <Link href={"/"}>
-                            <button className={`${path == "/" ? " bg-[#244D3F] text-white border-none" : ""} btn btn-outline`}><IoHome /> Home</button>
+                            <button className={`${path == "/" ? " bg-[#244D3F] text-white border-none" : ""} btn btn-outline w-30`}><IoHome /> Home</button>
                         </Link>
                         <Link href={"/timeline "}>
-                            <button className={`${path == "/timeline" ? " bg-[#244D3F] text-white border-none" : ""} btn btn-outline`}><IoTimeOutline /> Timeline</button>
+                            <button className={`${path == "/timeline" ? " bg-[#244D3F] text-white border-none" : ""} btn btn-outline  w-30`}><IoTimeOutline /> Timeline</button>
                         </Link>
                         <Link href={"/stats"}>
-                            <button className={`${path == "/stats" ? " bg-[#244D3F] text-white border-none" : ""} btn btn-outline`}><MdOutlineQueryStats />Stats</button>
+                            <button className={`${path == "/stats" ? " bg-[#244D3F] text-white border-none" : ""} btn btn-outline  w-30`}><MdOutlineQueryStats />Stats</button>
                         </Link>
                     </div>
                 </div>

@@ -12,7 +12,7 @@ export default function RecentInteractions({ interactionsData }) {
 
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-[#112D23] text-lg lg:text-2xl font-semibold">Recent Interactions</h2>
-                <button className="flex items-center gap-2 px-4 py-2 bg-[#F9FAFB] border border-gray-200 rounded-md text-sm font-medium text-[#4B5563] hover:bg-gray-100 transition-colors">
+                <button  className="flex items-center gap-2 px-4 py-2 bg-[#F9FAFB] border border-gray-200 rounded-md text-sm font-medium text-[#4B5563] hover:bg-gray-100 transition-colors">
                     <FaHistory className="text-gray-500" />
                     Full History
                 </button>
@@ -22,7 +22,7 @@ export default function RecentInteractions({ interactionsData }) {
                 {
                     interactionsData.map((item, ind) => (
                         <div key={ind}>
-                            <div className="flex items-center justify-between gap-20 py-6 border-b border-gray-500/50">
+                            <div className="flex items-center justify-between gap-2 py-6 border-b border-gray-500/50">
                                 <div className="flex items-center gap-6">
 
                                     {item.action == "call" ? <IoCall className="text-3xl text-gray-800" /> : item.action == "text" ? <BiSolidMessageDetail className="text-3xl text-gray-800" /> : <FaRegFileVideo className="text-3xl text-gray-800" />}
