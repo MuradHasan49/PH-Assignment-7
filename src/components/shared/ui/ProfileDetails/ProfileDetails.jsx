@@ -26,7 +26,7 @@ const ProfileDetails = ({ specificUser }) => {
             timestamp: readableTimestamp
         };
 
-        setInteractionsData([...interactionsData, newEntry]);
+        setInteractionsData([newEntry, ...interactionsData]);
     };
     return (
         <>

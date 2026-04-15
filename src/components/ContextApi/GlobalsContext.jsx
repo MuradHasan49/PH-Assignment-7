@@ -10,8 +10,8 @@ const GlobalsContext = ({ children }) => {
     return (
         <>
             <myContext.Provider value={{ data, setData }}>
-                <InteractionsDataCotext.Provider value={{interactionsData,setInteractionsData}}>
-                {children}
+                <InteractionsDataCotext.Provider value={{ interactionsData, setInteractionsData }}>
+                    {children}
                 </InteractionsDataCotext.Provider>
             </myContext.Provider>
         </>
