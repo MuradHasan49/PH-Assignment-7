@@ -5,6 +5,7 @@ import { FaInbox, FaPencil, FaRegBell, FaRegCommentDots, FaRegFileVideo, FaRegTr
 import RecentInteractions from "../RecentInteractions/RecentInteractions";
 import { useContext, useState } from "react";
 import { InteractionsDataCotext } from "@/components/ContextApi/GlobalsContext";
+import { toast } from "react-toastify";
 
 const ProfileDetails = ({ specificUser }) => {
     const { picture, name, days_since_contact, status, tags, email, bio, next_due_date, goal } = specificUser;
@@ -27,6 +28,10 @@ const ProfileDetails = ({ specificUser }) => {
         };
 
         setInteractionsData([newEntry, ...interactionsData]);
+        toast.success(type == "call" ? "call" : type == "text"? "text" : "video", {
+            theme: "colored",
+        });
+
     };
     return (
         <>
