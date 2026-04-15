@@ -1,16 +1,18 @@
+import ProfileDetails from "@/components/shared/ui/ProfileDetails/ProfileDetails";
 
-const friendId = async ({ params }) => {
+const friendDetailsProfile = async ({ params }) => {
     const { friendId } = await params
     const dataPromise = await fetch(`http://localhost:3000/apidata.json/`)
     const data = await dataPromise.json();
 
     const specificUser = data.find(item => item.id == friendId)
 
-    console.log(specificUser)
 
     return (
-        <div>friendId</div>
+        <>
+            <ProfileDetails specificUser={specificUser} />
+        </>
     )
 }
 
-export default friendId
+export default friendDetailsProfile
