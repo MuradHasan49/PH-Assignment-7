@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FaPhoneAlt } from "react-icons/fa"
 import { FaInbox, FaPencil, FaRegBell, FaRegCommentDots, FaRegFileVideo, FaRegTrashCan } from "react-icons/fa6"
 import RecentInteractions from "../RecentInteractions/RecentInteractions";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { InteractionsDataCotext } from "@/components/ContextApi/GlobalsContext";
 import { toast } from "react-toastify";
 
@@ -28,7 +28,7 @@ const ProfileDetails = ({ specificUser }) => {
         };
 
         setInteractionsData([newEntry, ...interactionsData]);
-        toast.success(type == "call" ? "call" : type == "text"? "text" : "video", {
+        toast.success(type == "call" ? `Call with ${specificUser.name}` : type == "text" ? `Text with ${specificUser.name}` : `Video with ${specificUser.name}`, {
             theme: "colored",
         });
 

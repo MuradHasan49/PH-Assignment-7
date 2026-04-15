@@ -25,7 +25,7 @@ const RechartPags = () => {
         interactionsData.length == 0 ? <NoFriendshipData /> :
           <>
             <h2 className='text-3xl text-gray-800 font-bold py-10'>Friendship Analytics</h2>
-            <div className=" h-[50vh] border border-gray-600/50 rounded-lg">
+            <div className=" h-[50vh] border border-gray-600/50 rounded-lg relative">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
@@ -50,6 +50,7 @@ const RechartPags = () => {
                   <RechartsDevtools />
                 </PieChart>
               </ResponsiveContainer>
+              <h2 className='p-2 text-xl text-gray-800 font-semibold absolute top-0 left-0'>By Interaction Type</h2>
             </div>
           </>
       }

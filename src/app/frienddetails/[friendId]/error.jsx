@@ -1,5 +1,4 @@
 'use client';
-
 import Link from 'next/link';
 import { BiErrorCircle } from 'react-icons/bi';
 import { FaArrowLeft } from 'react-icons/fa6';

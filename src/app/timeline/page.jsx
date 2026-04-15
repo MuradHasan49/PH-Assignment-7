@@ -40,7 +40,7 @@ const TimeLinePage = () => {
                     </div>
                     <div className="flex flex-col gap-0.5">
                       <p className="text-[16px] text-[#64748b]">
-                        <span className="font-semibold text-[#214a3d]">{item.action == "text" ? "Text" : item.action == "call" ? "Call" : "Video"}</span> with {item.user.name}
+                        <span className="font-extrabold text-[#214a3d]">{item.action == "text" ? "Text" : item.action == "call" ? "Call" : "Video"}</span> with {item.user.name}
                       </p>
                       <p className="text-[14px] text-[#64748b]">
                         {item.timestamp}

@@ -1,4 +1,6 @@
+import { Suspense } from "react";
 import ProfileCard from "../shared/ui/ProfileCard/ProfileCard";
+import Fallback from "../shared/ui/Fallback/Fallback";
 
 const HomeContent = async () => {
     const dataPromise = await fetch("http://localhost:3000/apidata.json")
@@ -7,10 +9,12 @@ const HomeContent = async () => {
 
     const stats = [
         { value: data.length, label: 'Total Friends' },
-        { value: allOnTrack.length , label: 'On Track' },
+        { value: allOnTrack.length, label: 'On Track' },
         { value: '6', label: 'Need Attention' },
         { value: '12', label: 'Interactions This Month' },
     ];
+
+
     return (
         <>
             <header className="flex flex-col items-center justify-center py-20 px-6">
@@ -46,12 +50,11 @@ const HomeContent = async () => {
 
                 <div className="w-full h-px bg-gray-200 mt-12 mb-4"></div>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pb-10">
-                {
-                    data.map(item => <ProfileCard key={item.id} item={item} />)
-                }
-            </div>
+            <Suspense fallback={<Fallback />}>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pb-10">
+                    {data.map(item => <ProfileCard key={item.id} item={item} />)}
+                </div>
+            </Suspense>
         </>
     )
 }

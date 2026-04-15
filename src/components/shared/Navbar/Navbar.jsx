@@ -45,9 +45,6 @@ const Navbar = () => {
                         <Link href={"/stats"}>
                             <button className={`${path == "/stats" ? " bg-[#244D3F] text-white border-none" : ""} btn btn-outline`}><MdOutlineQueryStats />Stats</button>
                         </Link>
-                        <Link href={"/error"}>
-                            <button className={`${path == "/stats" ? " bg-[#244D3F] text-white border-none" : ""} btn btn-outline`}><MdOutlineQueryStats />Error page chack</button>
-                        </Link>
                     </div>
                 </div>
             </div>
