@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { BsStopwatch } from "react-icons/bs";
 import { SiTimescale } from "react-icons/si";
 
 const NoDataFound = () => {
