@@ -30,7 +30,6 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full ">
         <GlobalsContext>
-
           <Navbar />
           {children}
           <Footer />
