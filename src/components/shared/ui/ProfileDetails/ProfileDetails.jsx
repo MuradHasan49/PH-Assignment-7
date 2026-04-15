@@ -1,17 +1,14 @@
 import Image from "next/image";
 import { FaPhoneAlt } from "react-icons/fa"
 import { FaInbox, FaPencil, FaRegBell, FaRegCommentDots, FaRegFileVideo, FaRegTrashCan } from "react-icons/fa6"
+import RecentInteractions from "../RecentInteractions/RecentInteractions";
 
 const ProfileDetails = ({ specificUser }) => {
-
     const { picture, name, days_since_contact, status, tags, email, bio, next_due_date, goal } = specificUser;
-    // console.log(id)
-
     return (
         <>
             <div className="min-h-screen  p-10 font-sans text-gray-900">
                 <div className="container mx-auto flex flex-col md:flex-row gap-8">
-
                     <div className="w-full md:w-1/3 flex flex-col gap-6">
                         <div className="bg-white rounded-2xl shadow-sm p-10 flex flex-col items-center text-center border border-gray-100">
                             <Image
@@ -111,8 +108,8 @@ const ProfileDetails = ({ specificUser }) => {
                                 </button>
                             </div>
                         </div>
+                        <RecentInteractions specificUser={specificUser} />
                     </div>
-
                 </div>
             </div>
         </>
