@@ -28,7 +28,7 @@ const NoFriendshipData = () => {
                 </h2>
 
                 <p className="text-gray-500 max-w-sm mx-auto text-sm leading-relaxed mb-10">
-                    The analytics system couldn't retrieve any data for this view. Please try again or return to the Home.
+                    The analytics system couldn`t retrieve any data for this view. Please try again or return to the Home.
                 </p>
 
                 <button

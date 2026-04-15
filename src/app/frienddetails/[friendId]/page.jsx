@@ -7,7 +7,6 @@ const friendDetailsProfile = async ({ params }) => {
 
     const specificUser = data.find(item => item.id == friendId)
 
-
     return (
         <>
             <ProfileDetails specificUser={specificUser} />
