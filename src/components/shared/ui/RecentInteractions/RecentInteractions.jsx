@@ -1,5 +1,5 @@
 "use client"
-import { BiMessageRoundedDetail, BiPhoneCall, BiSolidMessageDetail, BiVideo } from 'react-icons/bi';
+import { BiSolidMessageDetail } from 'react-icons/bi';
 import { FaHistory } from 'react-icons/fa';
 import { FaRegFileVideo } from 'react-icons/fa6';
 import { IoCall } from 'react-icons/io5';
@@ -7,7 +7,6 @@ import { IoCall } from 'react-icons/io5';
 export default function RecentInteractions({ interactionsData }) {
 
     const a = interactionsData.map(item => item)
-    console.log(a)
     return (
         <div className="bg-white rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] border border-gray-100 p-1 lg:p-8">
 
