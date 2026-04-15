@@ -1,15 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect } from 'react';
 import { BiErrorCircle } from 'react-icons/bi';
 import { FaArrowLeft } from 'react-icons/fa6';
 import { IoHome } from 'react-icons/io5';
 
-const Error = ({ error }) => {
-    useEffect(() => {
-        console.error(error);
-    }, [error]);
+const Error = () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-[80vh] p-6 font-sans bg-[#F8FAFC]">
@@ -23,9 +19,7 @@ const Error = ({ error }) => {
                     Page Not Available
                 </h2>
 
-                <p className="text-[#64748b] text-[17px] mb-10 leading-relaxed max-w-md">
-                    {error.message || "We hit a minor bump in the road while putting this page together. Let's give it another try."}
-                </p>
+                <p className="text-[#64748b] text-[17px] mb-10 leading-relaxed max-w-md">The page you’re looking for isn’t available right now. Please go back to the previous page or return to the home page to continue browsing.</p>
 
                 <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                     <button
@@ -37,7 +31,7 @@ const Error = ({ error }) => {
                     </button>
                     <Link href={"/"}>
                         <button
-                            className="flex items-center justify-center gap-2.5 bg-[#112D23] hover:bg-[#1a4233] text-white font-medium text-[16px] px-8 py-3.5 rounded-full transition-colors focus:outline-none focus:ring-4 focus:ring-gray-200"
+                            className="flex items-center w-full justify-center gap-2.5 bg-[#112D23] hover:bg-[#1a4233] text-white font-medium text-[16px] px-8 py-3.5 rounded-full transition-colors focus:outline-none focus:ring-4 focus:ring-gray-200"
                         >
                             <IoHome className="text-sm" />
                             <span>Home</span>
