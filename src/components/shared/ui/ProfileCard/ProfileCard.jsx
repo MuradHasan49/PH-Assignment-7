@@ -7,7 +7,6 @@ export default function ProfileCard({ item }) {
     return (
         <Link href={`/frienddetails/${id}`}>
             <div className=" bg-white rounded-[20px] shadow-[0_4px_12px_rgba(0,0,0,0.04)] border border-gray-50 p-6 flex flex-col items-center">
-
                 <Image
                     width={84}
                     height={84}
@@ -37,7 +36,6 @@ export default function ProfileCard({ item }) {
                         {status}
                     </span>
                 </div>
-
             </div>
         </Link>
     );
