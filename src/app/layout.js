@@ -4,7 +4,6 @@ import Navbar from "@/components/shared/Navbar/Navbar";
 import Footer from "@/components/shared/Footer/Footer";
 import GlobalsContext from "@/components/ContextApi/GlobalsContext";
 import { ToastContainer } from "react-toastify";
-// import { useState } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +21,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  // const {data,Setdata} = useState()
+
   return (
     <html
       data-theme="ligth"
