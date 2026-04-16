@@ -7,7 +7,7 @@ const NoDataFound = () => {
       <div className="relative mb-6">
         <div className="absolute inset-0 rounded-full bg-primary/20 animate-ping"></div>
         <div className="relative z-10 p-5 rounded-full bg-linear-to-tr from-base-300 to-base-100 border border-gray-600/50 shadow-xl">
-          <SiTimescale className="text-3xl md:text-6xl lg:text-9xl"/>
+          <SiTimescale className="text-3xl md:text-6xl lg:text-9xl" />
         </div>
       </div>
 

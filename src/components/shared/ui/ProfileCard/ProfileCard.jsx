@@ -2,8 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function ProfileCard({ item }) {
-    console.log(item)
-    const { picture, name, days_since_contact, status, tags,id } = item;
+    const { picture, name, days_since_contact, status, tags, id } = item;
 
     const validation = status == "almost due" ? "bg-[#eeb14e]" : status == "overdue" ? "bg-red-500" : "bg-[#2c784c]"
     return (

@@ -29,7 +29,7 @@ function Footer() {
                         </a>
                     </div>
                 </div>
-                    <div className="border-t border-gray-400/50 mb-6"></div>
+                <div className="border-t border-gray-400/50 mb-6"></div>
                 <div className="flex flex-col md:flex-row justify-between  text-[13px] text-white/60 ">
                     <p className="mb-4 md:mb-0">
                         © 2026 KeenKeeper. All rights reserved.

@@ -33,7 +33,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </div>
-                        <Link href={"/"} className="text-black font-black text-xl lg:text-3xl">Keen<span className="text-[#244D3F] text-xl lg:text-3xl font-semibold">Keeper</span></Link>
+                        <Link href={"/"} className="text-black font-black text-xl lg:text-3xl ml-5 md:ml-0">Keen<span className="text-[#244D3F] text-xl lg:text-3xl font-semibold">Keeper</span></Link>
                     </div>
                     <div className="navbar-end hidden lg:flex gap-2 text-gray-600">
                         <Link href={"/"}>

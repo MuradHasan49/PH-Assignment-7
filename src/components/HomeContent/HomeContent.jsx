@@ -3,6 +3,7 @@ import ProfileCard from "../shared/ui/ProfileCard/ProfileCard";
 import Fallback from "../shared/ui/Fallback/Fallback";
 
 const HomeContent = async () => {
+    //  for netlify const dataPromise = await fetch("https://mhs-ph-assignment-07.netlify.app/apidata.json")
     const dataPromise = await fetch("https://ph-assignment-7-gw8u.vercel.app/apidata.json")
     const data = await dataPromise.json()
     const allOnTrack = data.filter(item => item.status === "on-track");
