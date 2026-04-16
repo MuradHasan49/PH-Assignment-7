@@ -63,16 +63,6 @@ The app also includes timeline tracking, filtering options, analytics via charts
 
 ---
 
-## 📂 Pages Overview
-- `/` – Home (Data Cards)
-- `/details/[id]` – Card Details Page
-- `/timeline` – Activity Timeline with filters
-- `/stats` – Analytics dashboard (Pie charts)
-- `404` – Custom Not Found Page
-- `error.jsx` – Global error handler
-
----
-
 ## 📦 Deployment
 Hosted on **Vercel** for fast and scalable performance.
 
