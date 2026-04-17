@@ -13,7 +13,6 @@ const TimeLinePage = () => {
   const [selectedLabel, setSelectedLabel] = useState("All Interactions")
   const dropdownRef = useRef(null)
 
-  // Calculate filter counts for the dropdown
   const Calls = interactionsData.filter(item => item.action === "call")
   const Texts = interactionsData.filter(item => item.action === "text")
   const Videos = interactionsData.filter(item => item.action === "video")
