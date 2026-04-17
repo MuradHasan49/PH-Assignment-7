@@ -19,18 +19,16 @@ const Navbar = () => {
         <nav className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-1000">
             <div className="navbar container mx-auto px-4 flex justify-between items-center h-16 bg-white relative z-1001">
 
-                {/* LOGO */}
                 <div className="flex-none">
                     <Link href={"/"} className="text-black font-black text-xl lg:text-2xl">
                         Keen<span className="text-[#244D3F] font-semibold">Keeper</span>
                     </Link>
                 </div>
 
-                {/* DESKTOP NAV */}
                 <div className="hidden lg:flex gap-2 ">
                     {navLinks.map((link) => (
                         <Link key={link.href} href={link.href}>
-                            <button className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 font-medium 
+                            <button className={`flex items-center gap-2 px-4 py-2 border rounded-lg transition-all duration-300 font-medium 
                                 ${path === link.href
                                     ? "bg-[#244D3F] text-white"
                                     : "text-gray-600 hover:bg-gray-100"}`}>
@@ -40,7 +38,6 @@ const Navbar = () => {
                     ))}
                 </div>
 
-                {/* MOBILE HAMBURGER BUTTON (Right) */}
                 <div className="lg:hidden">
                     <button
                         onClick={() => setIsOpen(!isOpen)}
